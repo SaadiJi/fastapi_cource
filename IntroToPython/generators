@@ -1,0 +1,13 @@
+def main():
+    n= int(input("What n? "))
+    for i in range(n):
+        print(sheep(i))
+        
+# yield does iteration each iteration give the value
+# not like simple loop that execute first and return all the values at once..    
+def sheep(n):
+    for i in range(n)
+    yield "X" * n
+
+if __name__ = "__main__":
+    main()
