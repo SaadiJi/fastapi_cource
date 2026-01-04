@@ -1,0 +1,48 @@
+sudo apt install nginx -y
+systemctl start nginx
+cd /etc/nginx/sites-avaiable
+cat default
+
+server{
+    listen 80 ;
+    .
+    .
+
+    server_name _;
+
+    location /{
+
+        proxy_pass http://localhost:8000;
+
+    }
+}
+
+
+systemctl restart nginx
+
+https configuration instruction
+certbot
+
+
+
+systemctl enable nginx
+
+setting up firewall
+sudo ufw status
+sudo ufw allow http
+sudo ufw allow https
+sudo ufw allow ssh
+sudo ufw allow 5432
+sudo ufw enable
+ if want to delete
+ sudo wfw delete allow 5432
+
+
+
+
+
+
+
+ pytest --disable-warnings 
+ pytest -v -x
+ 

@@ -30,7 +30,7 @@ class Post(PostBase):
     owner: UserOut
    
     class Config:
-        # orm_mode = True
+        #orm_mode = True
         from_attributes = True
         
 class UserCreate(BaseModel):
@@ -52,4 +52,14 @@ class TokenData(BaseModel):
 class Vote(BaseModel):
     post_id: int
     dir: conint(le=1)
+    
+
+class PostOut(BaseModel):
+    Post: Post
+    votes: int = 0
+    
+    class Config:
+        #orm_mode = True
+        from_attributes = True
+        
     

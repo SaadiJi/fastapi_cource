@@ -41,5 +41,5 @@ app.include_router(vote.router)
 
 @app.get("/")
 def read_root():
-    return {"Hello": "Wellcom to FastApi"}
+    return {"Hello": "Wellcom to FastApi updated"}
     
