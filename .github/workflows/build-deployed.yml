@@ -67,6 +67,8 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi-testings:latest
+          cache-from: type=local,src=${{ github.workspace }}/.buildx-cache
+          cache-to: type=local,dest=${{ github.workspace }}/.buildx-cache
           # cache-from: type=local, src=/temp/.buildx-cache
           # cache-to: type=local,dest=/tmp/.buildx-cache
           # cache-from: type=gha
